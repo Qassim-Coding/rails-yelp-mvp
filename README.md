@@ -1,24 +1,16 @@
 # README
+A common task is to rollback the last migration. For example, if you made a mistake in it and wish to correct it. Rather than tracking down the version number associated with the previous migration you can run:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+$ bin/rails db:rollback
 
-Things you may want to cover:
+This will rollback the latest migration, either by reverting the change method or by running the down method. If you need to undo several migrations you can provide a STEP parameter:
 
-* Ruby version
+$ bin/rails db:rollback STEP=3
 
-* System dependencies
+The last 3 migrations will be reverted.
 
-* Configuration
 
-* Database creation
+Les users stories : tout ce que notre app peut faire.
+--> On parle a une personne non technique.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+LES ERREURS SONT LES PLUS GRANDS PROFESSEURS !
